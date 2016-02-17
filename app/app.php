@@ -1,17 +1,18 @@
 <?php
-    require_once __DIR__."/../vendor/autoload.php";
+	require_once __DIR__.'/../vendor/autoload.php';
+	require_once __DIR__.'/../src/RockPaperScissors.php';
 
-    $app = new Silex\Application();
+	$app = new Silex\Application();
+	$app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'));
 
-    $app->get("/", function() use($app){
-      return "HELLO";
-    });
-    $app->get("/RockPaperScissors.php", function() use($app){
-      return $app['twig']->render('home.html.twig', array());
-    });
+	$app->get('/', function() use ($app){
+		return $app['twig']->render('home.html.twig');
+	});
 
-    $app->post("/results", function() use($app){
-      $new_RockPaperScissors = new RockPaperScissors()
-    });
-    return $app;
- ?>
+	$app->get('/play', function() use ($app){
+		$plays = new RockPaperScissors($_GET['player1'], $_GET['player2']);
+		return $app['twig']->render('home.html.twig', array('plays' => $plays));
+	});
+
+	return $app;
+?>

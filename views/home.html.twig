@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="../styles.css">
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Play your favorite childhood game!</h1>
+        <form action="/play" method="get">
+          <label for="player1">Player 1:</label>
+          <select name="player1">
+            <option value="rock" selected>Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+          </select>
+          <label for="player2">Player 2:</label>
+          <select name="player2">
+            <option value="rock" selected>Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+          </select>
+          <button type="submit" class="btn-success">Play!</button>
+        </form>
+
+
+        <h2>Game Results</h2>
+         <h1>{{ plays.playGame }}</h1>
+
+    </div>
+  </body>
+</html>

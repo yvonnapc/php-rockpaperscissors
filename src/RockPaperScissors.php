@@ -1,34 +1,43 @@
 <?php
-    class RockPaperScissors
-    {
-      private $player1;
-      private $player2;
-
-      function __construct($player1, $player2){
-        $this->player1 = $player1;
-        $this->player2 = $player2;
-      }
-      function getPLayerOne()
-      {
-        return $player1;
-      }
-      function setPlayerOne($move)
-      {
-        $this->player1 = $move
-      }
-      function getPlayer2()
-      {
-        return $player2;
-      }
-      function setPLayer2($move)
-      {
-        $this->player2 = $move
-      }
-      function playGame()
-      {
-        if ($this->getPlayer1 == "rock" && $this->getPlayer2 == "scissors"|| $this->getPLayer1 === "paper" && $this->getPlayer1 === "rock" || $this->getPlayer1 == "")
-        return $result;
-      }
-    }
-
+	 class RockPaperScissors
+		{
+			private $playerOne;
+			private $playerTwo;
+			function __construct($playerOne, $playerTwo)
+			{
+				$this->playerOne = $playerOne;
+				$this->playerTwo = $playerTwo;
+			}
+			function getPlayerOne()
+			{
+				return $this->playerOne;
+			}
+			function setPlayerOne($choice)
+			{
+				$this->playerOne = $choice;
+			}
+			function getPlayerTwo()
+			{
+				return $this->playerTwo;
+			}
+			function setPlayerTwo($choice)
+			{
+				$this->playerTwo = $choice;
+			}
+			function playGame ()
+			{
+				if ($this->getPlayerOne() == "rock" && $this->getPlayerTwo() == "scissors" || $this->getPlayerOne() == "paper" && $this->getPlayerTwo() == "rock" || $this->getPlayerOne() == "scissors" && $this->getPlayerTwo() == "paper")
+				{
+					return "Winnder: Player 1";
+				}
+				elseif ($this->getPlayerOne() == $this->getPlayerTwo())
+				{
+					return "Draw! Play Again";
+				}
+				else
+				{
+					return "Winner: Player 2";
+				}
+			}
+	}
  ?>

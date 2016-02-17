@@ -5,7 +5,7 @@
     class RockPaperScissorsTest extends PHPUnit_Framework_TestCase
     {
 
-        function test_rock_scissors()
+        function test_playGame_rock_scissors()
         {
             //Arrange
             $test_RockPaperScissors = new RockPaperScissors;
@@ -18,7 +18,7 @@
             //Assert
             $this->assertEquals("Player 1", $result);
         }
-        function test_rock_paper()
+        function test_playGame_rock_paper()
         {
 
             $test_RockPaperScissors = new RockPaperScissors;
@@ -29,7 +29,7 @@
 
             $this->assertEquals("Player 2", $result);
         }
-        function test_rock_rock()
+        function test_playGame_rock_rock()
         {
 
               $test_RockPaperScissors = new RockPaperScissors;
