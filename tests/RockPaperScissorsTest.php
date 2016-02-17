@@ -27,7 +27,7 @@
 
             $result = $test_RockPaperScissors->playGame($first_input, $second_input);
 
-            $this->assertEquals("Player 1", $result);
+            $this->assertEquals("Player 2", $result);
         }
         function test_rock_rock()
         {
