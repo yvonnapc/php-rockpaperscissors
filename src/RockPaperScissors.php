@@ -28,7 +28,7 @@
 			{
 				if ($this->getPlayerOne() == "rock" && $this->getPlayerTwo() == "scissors" || $this->getPlayerOne() == "paper" && $this->getPlayerTwo() == "rock" || $this->getPlayerOne() == "scissors" && $this->getPlayerTwo() == "paper")
 				{
-					return "Winnder: Player 1";
+					return "Winner: Player 1";
 				}
 				elseif ($this->getPlayerOne() == $this->getPlayerTwo())
 				{
